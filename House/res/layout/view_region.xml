@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#7F000000"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:orientation="horizontal" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:id="@+id/list_ll"
+            android:layout_height="wrap_content" >
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:cacheColorHint="@color/no_color"
+                android:divider="#dcdcdc"
+                android:dividerHeight="1px"
+                android:paddingLeft="4dp"
+                android:scrollbars="none" >
+            </ListView>
+            <ListView
+                android:id="@+id/listView2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/choose_eara_item_press_color"
+                android:cacheColorHint="@color/no_color"
+                android:divider="@null"
+                android:paddingRight="4dp" >
+            </ListView>
+        </LinearLayout>
+        <View
+            android:layout_below="@+id/list_ll"
+             android:layout_width="fill_parent"
+        	 android:layout_height="fill_parent"
+        	 android:id="@+id/close_view"
+            />
+    </RelativeLayout>
+</merge>

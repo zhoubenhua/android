@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/house_topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen_40_dip"
+        layout="@layout/toolbar" />
+
+    <EditText
+        android:id="@+id/user_name_et"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen_27_dip"
+        android:layout_marginLeft="@dimen/dimen_10_dip"
+        android:layout_marginRight="@dimen/dimen_10_dip"
+        android:layout_marginTop="@dimen/dimen_17_dip"
+        android:background="@drawable/white_boarder"
+        android:hint="@string/input_tel"
+        android:inputType="phone"
+        android:paddingLeft="@dimen/dimen_10_dip"
+        android:textColor="#202020"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen_27_dip"
+        android:layout_marginLeft="@dimen/dimen_10_dip"
+        android:layout_marginRight="@dimen/dimen_10_dip"
+        android:background="@drawable/white_boarder" 
+        android:layout_marginTop="@dimen/dimen_17_dip" >
+
+        <Button
+            android:id="@+id/get_vercode_bt"
+            android:layout_width="@dimen/dimen_90_dip"
+            android:layout_height="@dimen/dimen_27_dip"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/huoqu" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_centerVertical="true"
+        	android:layout_toLeftOf="@+id/get_vercode_bt"
+            >
+
+            <TextView
+                android:id="@+id/vercode_title_tv"
+                style="@style/wrap_wrap"
+                android:layout_marginLeft="@dimen/dimen_10_dip"
+                android:text="验证码 : "
+                android:textColor="#202020"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/vercode_et"
+                style="@style/fill_wrap"
+                android:background="@null"
+                android:hint="@string/input_vercode"
+                android:textColor="#CCCCCC"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/login_bt"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen_30_dip"
+        android:layout_marginLeft="@dimen/dimen_10_dip"
+        android:layout_marginRight="@dimen/dimen_10_dip"
+        android:layout_marginTop="@dimen/dimen_20_dip"
+        android:background="@drawable/denglu" />
+
+</LinearLayout>

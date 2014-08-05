@@ -1,0 +1,736 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fill_fill"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/bottom_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen_39_dip"
+        android:layout_marginBottom="@dimen/dimen_15_dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/fudong" >
+
+        <ImageView
+            android:id="@+id/share_iv"
+            android:layout_width="@dimen/dimen_31_dip"
+            android:layout_height="@dimen/dimen_25_dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/share" />
+
+        <ImageView
+            android:id="@+id/sms_iv"
+            android:layout_width="@dimen/dimen_27_dip"
+            android:layout_height="@dimen/dimen_25_dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/smwx" />
+    </RelativeLayout>
+
+    <ScrollView
+        style="@style/fill_wrap"
+        android:layout_above="@+id/bottom_rl"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            style="@style/fill_wrap"    
+            android:orientation="vertical" >
+			<!-- 楼盘图片 -->
+            <com.yifang.house.widget.DownloadImageView
+                android:id="@+id/property_pic_iv"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dimen_180_dip"
+                android:scaleType="centerCrop"
+                android:src="@drawable/lppic" />
+			<!-- 楼盘基本信息 -->
+            <LinearLayout
+                style="@style/fill_wrap"
+                android:layout_margin="@dimen/dimen_10_dip"
+                android:orientation="vertical" >
+
+                <RelativeLayout style="@style/fill_wrap" >
+
+                    <TextView
+                        android:id="@+id/bbs_count_tv"
+                        style="@style/wrap_wrap"
+                        android:text="业主论坛 >"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/property_name_tv"
+                        style="@style/fill_wrap"
+                        android:layout_toLeftOf="@+id/bbs_count_tv"
+                        android:text="风凰名都"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/price_ll"
+                    style="@style/fill_wrap"
+                    android:layout_marginTop="@dimen/dimen_5_dip" >
+
+                    <TextView
+                        style="@style/wrap_wrap"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:text="均价 :  " />
+
+                    <TextView
+                        android:id="@+id/property_price_tv"
+                        style="@style/wrap_wrap"
+                        android:textSize="14sp"
+                        android:textColor="@color/red"
+                        android:text="4500元" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/range_ll"
+                    style="@style/fill_wrap"
+                    android:layout_marginTop="@dimen/dimen_5_dip" >
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        style="@style/wrap_wrap"
+                        android:text="面积 :  " />
+
+                    <TextView
+                        android:id="@+id/range_tv"
+                        android:text="80-120"
+                        android:textSize="14sp"
+                        style="@style/wrap_wrap" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/type_ll"
+                    style="@style/fill_wrap"
+                    android:layout_marginTop="@dimen/dimen_5_dip" >
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        style="@style/wrap_wrap"
+                        android:text="类型 :  " />
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:text="高层主宅"
+                        android:id="@+id/type_tv"
+                        style="@style/wrap_wrap" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/open_ll"
+                    style="@style/fill_wrap"
+                    android:layout_marginTop="@dimen/dimen_5_dip" >
+
+                    <TextView
+                        style="@style/wrap_wrap"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:text="开盘 :  " />
+
+                    <TextView
+                        android:id="@+id/open_tv"
+                        android:text="2014/06/12"
+                        android:textSize="14sp"
+                        style="@style/wrap_wrap" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/feature_ll"
+                    style="@style/fill_wrap"
+                    android:layout_marginTop="@dimen/dimen_5_dip" >
+
+                    <TextView
+                        style="@style/wrap_wrap"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:text="特色 :  " />
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:text="高科技楼盘"
+                        android:id="@+id/feature_title_tv"
+                        style="@style/wrap_wrap" />
+                </LinearLayout>
+            </LinearLayout>
+			<!-- 易房特惠 -->
+            <LinearLayout
+                android:id="@+id/discount_ll"
+                style="@style/fill_wrap"
+                android:layout_marginTop="@dimen/dimen_15_dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_26_dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/yfth" />
+
+                <RelativeLayout
+                    style="@style/fill_wrap"
+                    android:layout_marginLeft="@dimen/dimen_10_dip"
+                    android:layout_marginRight="@dimen/dimen_10_dip"
+                    android:layout_marginTop="@dimen/dimen_15_dip" >
+
+                    <LinearLayout
+                        style="@style/fill_wrap"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/discount_title_tv"
+                            style="@style/fill_wrap"
+                            android:textSize="14sp"
+                            android:text="1万抵8万" />
+
+                        <RelativeLayout
+                            style="@style/fill_wrap"
+                            android:layout_marginTop="@dimen/dimen_3_dip" >
+
+                            <ImageView
+                                android:layout_width="@dimen/dimen_12_dip"
+                                android:layout_height="@dimen/dimen_12_dip"
+                                android:id="@+id/clock_iv"
+                                android:visibility="gone"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/click" />
+
+                            <TextView
+                                android:id="@+id/discount_time_tv"
+                                style="@style/fill_wrap"
+                                android:layout_marginLeft="@dimen/dimen_10_dip"
+                                android:layout_toRightOf="@+id/clock_iv"
+                                android:textSize="14sp"
+                                android:layout_centerVertical="true"
+                        		android:textColor="@color/gray"
+                                android:text="16天10时" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_14_dip"
+                        android:layout_height="@dimen/dimen_16_dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/tipright" />
+                </RelativeLayout>
+            </LinearLayout>
+			<!--看房团购 -->
+            <LinearLayout
+                android:id="@+id/group_ll"
+                style="@style/fill_wrap"
+                android:layout_marginTop="@dimen/dimen_15_dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_26_dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/kftg" />
+
+                <RelativeLayout
+                    style="@style/fill_wrap"
+                    android:layout_marginLeft="@dimen/dimen_10_dip"
+                    android:layout_marginRight="@dimen/dimen_10_dip"
+                    android:layout_marginTop="@dimen/dimen_15_dip" >
+
+                    <LinearLayout
+                        style="@style/fill_wrap"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/group_title_tv"
+                            style="@style/fill_wrap"
+                            android:textSize="14sp"
+                            android:text="专线看房活动" />
+
+                        <RelativeLayout
+                            style="@style/fill_wrap"
+                            android:layout_marginTop="@dimen/dimen_2_dip" >
+
+                            <ImageView
+                                android:layout_width="@dimen/dimen_12_dip"
+                                android:layout_height="@dimen/dimen_12_dip"
+                                android:visibility="gone"
+                                android:background="@drawable/click" />
+
+                            <TextView
+                                android:id="@+id/group_time_tv"
+                                style="@style/fill_wrap"
+                                android:textSize="14sp"		
+                                android:text="浦东新区"
+                                android:layout_marginLeft="@dimen/dimen_10_dip"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/gray"
+                                 />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_14_dip"
+                        android:layout_height="@dimen/dimen_16_dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/tipright" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- 最新动态 -->
+            <LinearLayout
+                android:id="@+id/dynamic_ll"
+                style="@style/fill_wrap"
+                android:layout_marginTop="@dimen/dimen_15_dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_26_dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/zxdt" />
+
+                <RelativeLayout
+                    style="@style/fill_wrap"
+                    android:layout_marginLeft="@dimen/dimen_5_dip"
+                    android:layout_marginRight="@dimen/dimen_5_dip"
+                    android:layout_marginTop="@dimen/dimen_10_dip" >
+
+                    <com.yifang.house.widget.DownloadImageView
+                        android:id="@+id/dynamic_pic_iv"
+                        android:layout_width="@dimen/dimen_80_dip"
+                        android:layout_height="@dimen/dimen_60_dip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/images" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/dimen_80_dip"
+                        android:layout_marginLeft="@dimen/dimen_10_dip"
+                        android:layout_toRightOf="@+id/dynamic_pic_iv"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/dynamic_title_tv"
+                            android:textSize="15sp"
+                            style="@style/fill_wrap"
+                            android:text="5月20日购房节" />
+
+                        <TextView
+                            android:textSize="14sp"
+                            android:textColor="@color/gray"
+                            android:id="@+id/dynamic_content_tv"
+                            android:layout_marginTop="@dimen/dimen_5_dip"
+                            style="@style/fill_wrap"
+                            android:text="由于特色表现需要" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- 周边 -->
+            <LinearLayout
+                android:id="@+id/around_ll"
+                style="@style/fill_wrap"
+                android:layout_marginTop="@dimen/dimen_15_dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_26_dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/wzzb" />
+
+                <LinearLayout
+                    style="@style/fill_wrap"
+                    android:orientation="vertical"
+                     >
+
+                    <RelativeLayout
+                        style="@style/fill_wrap"
+                        android:layout_margin="@dimen/dimen_10_dip" >
+
+                        <ImageView
+                            android:id="@+id/address_arrow_iv"
+                            android:layout_width="@dimen/dimen_14_dip"
+                            android:layout_height="@dimen/dimen_16_dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/tipright" />
+
+                        <LinearLayout
+                            android:layout_centerVertical="true"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dimen_10_dip"
+                            android:layout_toLeftOf="@+id/address_arrow_iv" >
+
+                            <TextView
+                                style="@style/wrap_wrap"
+                                android:textSize="14sp"
+                                android:text="地址 : " />
+
+                            <TextView
+                                android:id="@+id/address_tv"
+                                style="@style/wrap_wrap"
+                                android:textSize="14sp"
+                                android:textColor="@color/gray"
+                                android:text="嘉定城北路" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <com.yifang.house.widget.DownloadImageView 
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/property_map_iv"
+                        />
+                    <LinearLayout 
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/dimen_36_dip"
+                        >
+                        <Button 
+                            android:id="@+id/school_bt"
+                            android:background="@drawable/xx"
+                            android:layout_height="@dimen/dimen_36_dip"
+                            android:layout_width="@dimen/dimen_63_dip"
+                            />
+                        <Button 
+                            android:id="@+id/bus_bt"
+                            android:background="@drawable/gj"
+                            android:layout_height="@dimen/dimen_36_dip"
+                            android:layout_width="@dimen/dimen_63_dip"
+                            />
+                        <Button 
+                            android:id="@+id/super_bt"
+                            android:background="@drawable/sc"
+                            android:layout_height="@dimen/dimen_36_dip"
+                            android:layout_width="@dimen/dimen_63_dip"
+                            />
+                         <Button 
+                            android:id="@+id/repast_bt"
+                            android:background="@drawable/cy"
+                            android:layout_height="@dimen/dimen_36_dip"
+                            android:layout_width="@dimen/dimen_63_dip"
+                            />
+                         <Button 
+                            android:id="@+id/medical_bt"
+                            android:background="@drawable/yl"
+                            android:layout_height="@dimen/dimen_36_dip"
+                            android:layout_width="@dimen/dimen_63_dip"
+                            />
+                    </LinearLayout>
+                    <TextView 
+                        style="@style/fill_wrap"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:padding="@dimen/dimen_10_dip"
+                        android:text="连云港市一中"
+                        android:id="@+id/area_content_tv"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 主户型 -->
+             <LinearLayout
+                android:id="@+id/apartment_ll"
+                style="@style/fill_wrap"
+                android:layout_marginTop="@dimen/dimen_15_dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_26_dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/zlhx" />
+                <HorizontalScrollView 
+                    android:id="@+id/apartment_hv"
+                    android:scrollbars="none"
+                    style="@style/fill_wrap" >
+                    <LinearLayout 
+                        style="@style/fill_wrap" >
+                        <GridView
+                            android:id="@+id/apartment_pic_gv"
+                            style="@style/fill_wrap"
+                            android:paddingTop="@dimen/dimen_10_dip" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+            </LinearLayout>
+            <!-- 楼盘参数 -->
+            <LinearLayout
+                android:id="@+id/property_parameters_ll"
+                style="@style/fill_wrap"
+                android:layout_marginTop="@dimen/dimen_15_dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_26_dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/lpcs" />
+				<LinearLayout 
+				    android:layout_marginRight="@dimen/dimen_10_dip"
+				    style="@style/fill_wrap"
+				    android:orientation="vertical"
+				    android:layout_marginTop="@dimen/dimen_13_dip"
+				    android:layout_marginLeft="@dimen/dimen_10_dip"
+				    >
+				    <TextView
+				        style="@style/fill_wrap"
+				        android:text="开盘时间"
+				        android:textSize="14sp"
+                        android:textColor="@color/gray"
+				        android:id="@+id/open_time_tv"
+				        />
+				    <TextView
+				        android:text="交房时间"
+				        android:layout_marginTop="@dimen/dimen_5_dip"
+				        style="@style/fill_wrap"
+				        android:textSize="14sp"
+                        android:textColor="@color/gray"
+				        android:id="@+id/trad_time_tv"
+				        />
+				     <TextView
+				        android:text="建筑面积"
+				        android:textSize="14sp"
+                        android:textColor="@color/gray"
+				        android:layout_marginTop="@dimen/dimen_15_dip"
+				        style="@style/fill_wrap"
+				        android:id="@+id/build_area_tv"
+				        />
+				     <TextView
+				        android:text="用地面积"
+				        android:textSize="14sp"
+                        android:textColor="@color/gray"
+				        android:layout_marginTop="@dimen/dimen_5_dip"
+				        style="@style/fill_wrap"
+				        android:id="@+id/use_area_tv"
+				        />
+				     <TextView
+				        android:text="容积率"
+				        android:textSize="14sp"
+				        android:layout_marginTop="@dimen/dimen_5_dip"
+                        android:textColor="@color/gray"
+				        style="@style/fill_wrap"
+				        android:id="@+id/rongjilv_tv"
+				        />
+				     <TextView
+				        android:text="总户数"
+				        android:textSize="14sp"
+                        android:textColor="@color/gray"
+				        android:layout_marginTop="@dimen/dimen_5_dip"
+				        style="@style/fill_wrap"
+				        android:id="@+id/house_num_tv"
+				        />
+				     <TextView
+				        android:text="车位数"
+				        android:textSize="14sp"
+                        android:textColor="@color/gray"
+				        android:layout_marginTop="@dimen/dimen_5_dip"
+				        style="@style/fill_wrap"
+				        android:id="@+id/park_num_tv"
+				        />
+				     <TextView
+				        android:text="产权年限"
+				        android:textSize="14sp"
+                        android:textColor="@color/gray"
+				        android:layout_marginTop="@dimen/dimen_5_dip"
+				        style="@style/fill_wrap"
+				        android:id="@+id/property_years_tv"
+				        />
+				     <TextView
+				        android:textSize="14sp"
+                        android:textColor="@color/gray"
+				        android:text="装修状况"
+				        android:layout_marginTop="@dimen/dimen_5_dip"
+				        style="@style/fill_wrap"
+				        android:id="@+id/decoration_tv"
+				        />
+				     <TextView
+				        android:text="物业费"
+				        android:textSize="14sp"
+                        android:textColor="@color/gray"
+				        android:layout_marginTop="@dimen/dimen_15_dip"
+				        style="@style/fill_wrap"
+				        android:id="@+id/property_costs_tv"
+				        />
+				     <TextView
+				        android:text="开发商"
+				        android:textSize="14sp"
+                        android:textColor="@color/gray"
+				        android:layout_marginTop="@dimen/dimen_5_dip"
+				        style="@style/fill_wrap"
+				        android:id="@+id/developers_tv"
+				        />
+				     <TextView
+				        android:text="物业公司"
+				        android:textSize="14sp"
+                        android:textColor="@color/gray"
+				        android:layout_marginTop="@dimen/dimen_5_dip"
+				        style="@style/fill_wrap"
+				        android:id="@+id/property_company_tv"
+				        />
+				     <TextView
+				        android:text="施工单位"
+				        android:textSize="14sp"
+                        android:textColor="@color/gray"
+				        android:layout_marginTop="@dimen/dimen_5_dip"
+				        style="@style/fill_wrap"
+				        android:id="@+id/construction_unnit_tv"
+				        />
+				</LinearLayout>
+            </LinearLayout>
+            <!-- 楼盘介绍 -->
+            <LinearLayout
+                android:id="@+id/property_detail_ll"
+                style="@style/fill_wrap"
+                android:layout_marginTop="@dimen/dimen_15_dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_26_dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/lpjs" />
+
+                <TextView
+                    android:id="@+id/property_detail_tv"
+                    style="@style/fill_wrap"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray"
+                    android:padding="@dimen/dimen_10_dip"
+                    android:text="江南苑位于莘庄地铁" />
+                <ImageView 
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/tipdown"
+                    android:layout_width="@dimen/dimen_22_dip"
+                    android:layout_height="@dimen/dimen_12_dip"
+                    />
+            </LinearLayout>
+            <!-- 楼盘特色 -->
+			<LinearLayout
+                android:id="@+id/property_features_ll"
+                style="@style/fill_wrap"
+                android:layout_marginTop="@dimen/dimen_15_dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_26_dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/lpts" />
+
+                <TextView
+                    android:id="@+id/property_features_tv"
+                    style="@style/fill_wrap"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray"
+                    android:padding="@dimen/dimen_10_dip"
+                    android:text="江南苑位于莘庄地铁,交通方便" />
+                <ImageView 
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/tipdown"
+                    android:layout_width="@dimen/dimen_22_dip"
+                    android:layout_height="@dimen/dimen_12_dip"
+                    />
+            </LinearLayout>
+            <!-- 价格走势 -->
+            <LinearLayout
+                android:id="@+id/price_trends_ll"
+                style="@style/fill_wrap"
+                android:layout_marginTop="@dimen/dimen_15_dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_26_dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/jgys" />
+                <com.yifang.house.widget.DownloadImageView
+                    android:layout_width="fill_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/price_thrends_pic_iv" />
+                <ImageView 
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/tipdown"
+                    style="@style/fill_wrap"
+                    android:layout_marginTop="@dimen/dimen_10_dip"
+                    android:layout_marginLeft="@dimen/dimen_14_dip"
+                    android:layout_marginRight="@dimen/dimen_14_dip"
+                    />
+            </LinearLayout>
+            <!-- 业主论坛 -->
+            <LinearLayout
+                android:id="@+id/bbs_ll"
+                style="@style/fill_wrap"
+                android:layout_marginTop="@dimen/dimen_15_dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_26_dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/yzlt" />
+                <com.yifang.house.widget.MyListView 
+                    style="@style/fill_wrap"
+                    android:fadingEdge="none"
+                    android:id="@+id/bbs_lv"
+                    android:cacheColorHint="#000000"
+                    />
+            </LinearLayout>
+            <!-- 职业顾问 -->
+             <LinearLayout
+                android:id="@+id/career_counselor_ll"
+                style="@style/fill_wrap"
+                android:layout_marginTop="@dimen/dimen_15_dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_26_dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/zygw" />
+                <com.yifang.house.widget.MyListView 
+                    style="@style/fill_wrap"
+                    android:fadingEdge="none"			
+                    android:id="@+id/career_counselor_lv"
+                    android:cacheColorHint="#000000"
+                    />
+            </LinearLayout>
+            <!-- 其他 -->
+             <LinearLayout
+                android:id="@+id/other_info_ll"
+                style="@style/fill_wrap"
+                android:layout_marginTop="@dimen/dimen_15_dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/same_price_propery_iv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_26_dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/djlp" />
+                <ImageView
+                    android:id="@+id/near_propery_iv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_26_dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/zblp" />
+                <ImageView
+                    android:id="@+id/recommend_propery_iv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_26_dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tjlp" />
+                <ImageView
+                    android:id="@+id/near_look_iv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_26_dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/zjll" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

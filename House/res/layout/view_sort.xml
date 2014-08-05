@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        <View
+            android:id="@+id/top_view"
+            android:layout_width="fill_parent"
+            android:background="#dcdcdc"
+            android:layout_height="0.5dip"           
+            />
+        <ListView
+            android:id="@+id/listView"
+            android:layout_below="@+id/top_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:cacheColorHint="@color/no_color"
+            android:divider="#dcdcdc"
+            android:fadingEdge="none"
+            android:dividerHeight="0.5dip"
+            android:paddingLeft="4dp"
+            android:scrollbars="none" >
+        </ListView>
+        <View
+            android:id="@+id/close_view"
+            style="@style/fill_fill"
+            android:layout_below="@+id/listView"
+             />
+    </RelativeLayout>
+
+</merge>
